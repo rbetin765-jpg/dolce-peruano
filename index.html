@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración: tildes y adaptación al celular -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolce Peruano | Pastelería</title>
+    <!-- Favicon: icono de la pestaña -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Fuentes de Google: cambian la letra de títulos y textos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Íconos FontAwesome: sin esta línea no se ven los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Hoja de estilos: todo el diseño de la página -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Header: parte superior con contacto y logo -->
+    <header>
+        <!-- Barra negra: teléfono, correo y redes -->
+        <div class="barra-contacto">
+            <div class="container barra-contacto-fila">
+                <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+5116429751">01 642 9751</a>
+                   <span class="separador"></span>
+                   <i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:hola@dolceperuano.pe">hola@dolceperuano.pe</a></p>
+                <p class="barra-redes">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </p>
+            </div>
+        </div>
+        <!-- Fila del logo y botón de pedido -->
+        <div class="top-bar container">
+            <!-- Logo: al hacer clic vuelve al inicio -->
+            <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="Dolce Peruano - ir al inicio"></a>
+            <div class="delivery-info">
+                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> ¡Comienza tu pedido!</span>
+                <a href="#contacto" class="btn-principal">Haz tu pedido</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú fijo: cada enlace lleva a una sección -->
+    <nav class="main-nav" aria-label="Menú principal">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal de la página -->
+    <main>
+
+        <!-- Banner: imagen de portada con texto y botón encima -->
+        <section class="banner" id="inicio">
+            <img src="assets/img/banner.jpg" alt="Promoción Dolce Peruano - Los mejores pasteles">
+            <div class="banner-texto">
+                <p>Los mejores pasteles, hechos con cariño para tu mesa</p>
+                <a href="#productos" class="btn-principal">Ver productos</a>
+            </div>
+        </section>
+
+        <!-- Nosotros: texto a la izquierda y foto a la derecha -->
+        <section class="seccion fondo-blanco" id="nosotros">
+            <div class="container">
+                <h2 class="titulo-seccion">Quiénes somos</h2>
+                <p class="subtitulo-seccion">Somos el equipo detrás de cada dulce</p>
+
+                <div class="nosotros-contenido">
+                    <div class="nosotros-texto">
+                        <p>
+                            Somos un grupo de jóvenes apasionados por la pastelería. En <strong>Dolce Peruano</strong> 
+                            unimos nuestra creatividad y dedicación para crear tortas, postres y momentos especiales 
+                            con mucho sabor y cariño.
+                        </p>
+                        <p>
+                            Cada uno de nosotros pone lo mejor de sí: desde la elaboración de las recetas hasta la 
+                            decoración final. Queremos que cada producto lleve un poco de nosotros y llegue a tu mesa 
+                            con la misma ilusión con la que lo preparamos.
+                        </p>
+                        <a href="#equipo" class="btn-principal">Conoce a nuestro equipo</a>
+                    </div>
+                    <div class="nosotros-imagen">
+                        <img src="assets/img/nosotros.jpg" alt="Nuestro equipo de trabajo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios: dos tarjetas de catering y pedidos -->
+        <section class="seccion" id="servicios">
+            <div class="container">
+                <h2 class="titulo-seccion">Nuestros servicios, a tu medida</h2>
+                <p class="subtitulo-seccion">Celebramos contigo cada momento especial</p>
+
+                <div class="servicios-grid">
+                    <article class="servicio-card">
+                        <img src="assets/img/catering.jpg" alt="Mesa de postres para eventos">
+                        <div class="servicio-info">
+                            <h3>Catering</h3>
+                            <p>
+                                Disfrutamos de compartir, celebrar cada momento y hacerlo memorable. 
+                                Nos gustaría ser parte de estos momentos con ustedes, compañeros de trabajo y clientes.
+                            </p>
+                            <a href="#contacto" class="btn-principal">Coordina tu evento</a>
+                        </div>
+                    </article>
+
+                    <article class="servicio-card">
+                        <img src="assets/img/pastelero.jpg" alt="Pedidos Corporativos">
+                        <div class="servicio-info">
+                            <h3>Pedidos Corporativos</h3>
+                            <p>
+                                Sorprende a tus clientes y colaboradores con detalles especiales para toda ocasión: 
+                                aniversarios, día de la madre, fiestas patrias y navidad.
+                            </p>
+                            <a href="#contacto" class="btn-principal">Coordina tu pedido</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos: tarjetas con foto, nombre y descripción -->
+        <section class="seccion fondo-blanco" id="productos">
+            <div class="container">
+                <h2 class="titulo-seccion">Nuestros productos</h2>
+                <p class="subtitulo-seccion">Lo más delicioso de nuestra pastelería</p>
+
+                <div class="productos-grid">
+                    <article class="producto-card">
+                        <img src="assets/img/tres-leches.jpg" alt="Torta Tres Leches">
+                        <h3>Torta Tres Leches</h3>
+                        <p>Esponjosa y cremosa, con fresas frescas y canela.</p>
+                    </article>
+
+                    <article class="producto-card">
+                        <img src="assets/img/cheesecake-maracuya.jpg" alt="Cheesecake de Maracuyá">
+                        <h3>Cheesecake de Maracuyá</h3>
+                        <p>Cremoso, con base crocante y cobertura de maracuyá.</p>
+                    </article>
+
+                    <article class="producto-card">
+                        <img src="assets/img/torta-chocolate.jpg" alt="Torta de Chocolate">
+                        <h3>Torta de Chocolate</h3>
+                        <p>Bizcocho húmedo con ganache brillante y fresas.</p>
+                    </article>
+
+                    <article class="producto-card">
+                        <img src="assets/img/alfajores.jpg" alt="Alfajores">
+                        <h3>Alfajores</h3>
+                        <p>Suaves, rellenos de manjar blanco y azúcar impalpable.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla de precios: tamaños de tortas -->
+        <section class="seccion fondo-blanco" id="precios">
+            <div class="container">
+                <h2 class="titulo-seccion">Tamaños y precios de nuestras tortas</h2>
+                <p class="subtitulo-seccion">Elige el tamaño ideal para tu celebración</p>
+                <div class="tabla-contenedor">
+                    <table>
+                        <caption>Precios referenciales por tamaño (soles)</caption>
+                        <thead>
+                            <tr><th scope="col">Tamaño</th><th scope="col">Porciones</th><th scope="col">Ideal para</th><th scope="col">Precio desde</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Mini</th><td>6</td><td>Reuniones pequeñas</td><td>S/ 55</td></tr>
+                            <tr><th scope="row">Mediana</th><td>12</td><td>Cumpleaños en familia</td><td>S/ 95</td></tr>
+                            <tr><th scope="row">Grande</th><td>20</td><td>Celebraciones con amigos</td><td>S/ 150</td></tr>
+                            <tr><th scope="row">Familiar XL</th><td>30</td><td>Eventos y pedidos corporativos</td><td>S/ 210</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería: fotos en varias filas -->
+        <section class="seccion" id="galeria">
+            <div class="container">
+                <h2 class="titulo-seccion">Galería</h2>
+                <p class="subtitulo-seccion">Algunas de nuestras creaciones</p>
+                <div class="galeria-grid">
+                    <figure class="galeria-item "><img src="assets/img/cupcakes.jpg" alt="Cupcakes de colores"></figure>
+                    <figure class="galeria-item ancho"><img src="assets/img/macarons.jpg" alt="Macarons y tartaletas"></figure>
+                    <figure class="galeria-item "><img src="assets/img/red-velvet.jpg" alt="Torta red velvet"></figure>
+                    <figure class="galeria-item "><img src="assets/img/tartaletas.jpg" alt="Tartaletas de frutas"></figure>
+                    <figure class="galeria-item ancho"><img src="assets/img/torta-flores.jpg" alt="Torta decorada con flores"></figure>
+                    <figure class="galeria-item "><img src="assets/img/brownies.jpg" alt="Brownies con nueces"></figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos: MP4 y YouTube lado a lado -->
+        <section class="seccion fondo-blanco" id="videos">
+            <div class="container">
+                <h2 class="titulo-seccion">Mira cómo endulzamos tus días</h2>
+                <p class="subtitulo-seccion">Nuestras creaciones y una receta para inspirarte</p>
+                <div class="videos-grid">
+                    <article class="video-card">
+                        <!-- Video MP4: sin sonido, en bucle -->
+                        <video src="assets/videos/dulces.mp4" poster="assets/img/torta-chocolate.jpg" controls autoplay muted loop playsinline></video>
+                        <h3><i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Nuestras creaciones</h3>
+                    </article>
+                    <article class="video-card">
+                        <div class="video-youtube">
+                            <!-- Video de YouTube: cambia el código al final del enlace para otro video -->
+                            <iframe src="https://www.youtube-nocookie.com/embed/byb-XjrDQ_E" title="Cómo preparar una torta de chocolate paso a paso" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3><i class="fa-brands fa-youtube" aria-hidden="true"></i> Receta de torta de chocolate</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios: opiniones de clientes -->
+        <section class="seccion" id="testimonios">
+            <div class="container">
+                <h2 class="titulo-seccion">Lo que dicen nuestros clientes</h2>
+                <p class="subtitulo-seccion">Experiencias reales de quienes nos eligen</p>
+
+                <div class="testimonios-grid">
+                    <div class="testimonio-card">
+                        <p>"La torta de mi cumpleaños quedó perfecta. Todos preguntaron de dónde la habíamos comprado."</p>
+                        <h4>— María G.</h4>
+                    </div>
+                    <div class="testimonio-card">
+                        <p>"Excelente atención y sabores únicos. Pedimos siempre para las reuniones de la oficina."</p>
+                        <h4>— Carlos R.</h4>
+                    </div>
+                    <div class="testimonio-card">
+                        <p>"El catering para nuestro evento fue un éxito. Todo delicioso y bien presentado."</p>
+                        <h4>— Ana P.</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipo: foto, nombre y rol de cada integrante -->
+        <section class="seccion fondo-blanco" id="equipo">
+            <div class="container">
+                <h2 class="titulo-seccion">Nuestro equipo</h2>
+                <p class="subtitulo-seccion">Las manos detrás de cada dulce</p>
+
+                <div class="equipo-grid">
+                    <div class="equipo-card">
+                        <img src="assets/img/chef2.jpg" alt="Piero Cordova">
+                        <h3>Piero Aaron Cordova Horna</h3>
+                        <p>Coordinador</p>
+                    </div>
+                    <div class="equipo-card">
+                        <img src="assets/img/chef4.jpg" alt="Luis Benites">
+                        <h3>Luis Steven Benites Miranda</h3>
+                        <p>Integrante</p>
+                    </div>
+                    <div class="equipo-card">
+                        <img src="assets/img/chef5.jpg" alt="Aaron Campos">
+                        <h3>Aaron Lucas Campos Castillo</h3>
+                        <p>Integrante</p>
+                    </div>
+                    <div class="equipo-card">
+                        <img src="assets/img/chef1.jpg" alt="Cielo Ortiz">
+                        <h3>Cielo Trinidad Ortiz Rios</h3>
+                        <p>Integrante</p>
+                    </div>
+                    <div class="equipo-card">
+                        <img src="assets/img/chef3.jpg" alt="Joshiro Checya">
+                        <h3>Joshiro Lin Checya Ticona</h3>
+                        <p>Integrante</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto: formulario y datos -->
+        <section class="seccion" id="contacto">
+            <div class="container">
+                <h2 class="titulo-seccion">Contáctanos</h2>
+                <p class="subtitulo-seccion">Cuéntanos qué quieres celebrar y te responderemos pronto</p>
+                <div class="contacto-contenido">
+                    <!-- Formulario: valida los campos sin enviar datos -->
+                    <form class="formulario" method="get">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. María Gómez" required>
+                        <label for="correo">Correo electrónico</label>
+                        <!-- Exige un correo válido -->
+                        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                        <label for="telefono">Teléfono</label>
+                        <!-- Campo de teléfono -->
+                        <input type="tel" id="telefono" name="telefono" placeholder="987 654 321" required>
+                        <label for="servicio">Servicio de interés</label>
+                        <!-- Lista desplegable obligatoria -->
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona una opción</option>
+                            <option>Tortas</option>
+                            <option>Cupcakes</option>
+                            <option>Catering</option>
+                            <option>Pedidos corporativos</option>
+                        </select>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos tu pedido" required></textarea>
+                        <!-- Botón que revisa los campos obligatorios -->
+                        <button type="submit" class="btn-principal"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Enviar mensaje</button>
+                    </form>
+                    <!-- Tarjeta con teléfono, correo y horario -->
+                    <aside class="contacto-datos">
+                        <h3>Atención al cliente</h3>
+                        <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+5116429751">01 642 9751</a></p>
+                        <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:hola@dolceperuano.pe">hola@dolceperuano.pe</a></p>
+                        <p><i class="fa-solid fa-clock" aria-hidden="true"></i> Lunes a sábado, 9:00 a 19:00</p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer: logo, enlaces, contacto y derechos reservados -->
+    <footer>
+        <div class="footer-top">
+            <div class="container footer-top-content">
+                <div class="footer-logo"><a href="index.html"><img src="assets/img/logo.png" alt="Logo Dolce Peruano"></a></div>
+                <div class="footer-mensaje"><p>En tu casa o en la nuestra no importa dónde estés, siempre vamos a engreírte con el gran sabor que nos caracteriza. ¡Gracias por preferirnos!</p></div>
+                <div class="footer-pagos"><img src="assets/img/metodos-pago.jpg" alt="Métodos de pago aceptados"></div>
+            </div>
+        </div>
+        <div class="footer-main container">
+            <div class="footer-col">
+                <h4>Mapa del sitio</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Categorías</h4>
+                <ul>
+                    <li><a href="#productos">Tortas</a></li>
+                    <li><a href="#productos">Cupcakes</a></li>
+                    <li><a href="#servicios">Catering</a></li>
+                    <li><a href="#servicios">Corporativos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-contacto">
+                <h4>Atención al cliente</h4>
+                <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+5116429751">01 642 9751</a></p>
+                <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:hola@dolceperuano.pe">hola@dolceperuano.pe</a></p>
+                <h4>Síguenos</h4>
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <div class="libro-reclamaciones"><img src="assets/img/libro-reclamaciones.jpg" alt="Libro de Reclamaciones"></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>Dolce Peruano © 2026 - Todos los derechos reservados.</p></div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,732 @@
+
+/* Variables: colores, fuentes y medidas de toda la pagina */
+:root {
+    --color-acento: #c2185b; /* color de botones y detalles */
+    --color-negro: #111111;
+    --color-texto: #333333; /* color del texto general */
+    --color-fondo: #f8f8f8; /* color de fondo de la pagina */
+    --color-blanco: #ffffff;
+    --color-gris: #666666; /* color de los parrafos */
+    --color-acento-oscuro: #8e1040; /* color de botones al pasar el mouse */
+    --color-borde: #eeeeee;
+    --color-gris-claro: #cccccc;
+    --color-gris-medio: #888888;
+    --color-linea: #333333;
+    --color-footer: #0a0a0a;
+    --fuente-principal: 'Poppins', Arial, sans-serif; /* fuente del texto */
+    --fuente-titulos: 'Playfair Display', Georgia, serif; /* fuente de los titulos */
+    --radio: 12px;
+    --sombra: 0 4px 12px rgba(0,0,0,0.06);
+    --transicion: 0.3s ease;
+    --sombra-boton: 0 4px 10px rgba(194,24,91,0.3);
+    --espacio-sm: 10px;
+    --espacio-md: 20px;
+    --espacio-lg: 50px; /* espacio entre secciones */
+}
+
+
+/* Quita margenes por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente, color, fondo e interlineado general */
+body {
+    font-family: var(--fuente-principal); /* fuente del texto */
+    color: var(--color-texto); /* color del texto */
+    background-color: var(--color-fondo); /* fondo de la pagina */
+    line-height: 1.6; /* interlineado */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Las imagenes no pasan del ancho de su caja */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Centra el contenido y limita su ancho */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Titulo y subtitulo de cada seccion */
+.titulo-seccion {
+    text-align: center;
+    font-size: 2rem; /* tamano del titulo */
+    margin-bottom: 15px;
+    color: var(--color-negro); /* color del titulo */
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    color: var(--color-gris); /* color del subtitulo */
+    margin-bottom: 40px;
+}
+
+/* Botones: color, forma y tamano */
+.btn-principal {
+    display: inline-block;
+    background-color: var(--color-acento); /* color del boton */
+    color: var(--color-blanco); /* color del texto del boton */
+    padding: 12px 28px;
+    border-radius: 25px; /* redondeo del boton */
+    font-weight: 600;
+    transition: background-color var(--transicion), transform var(--transicion);
+}
+
+/* Botones: cambio al pasar el mouse */
+.btn-principal:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-boton);
+    background-color: var(--color-acento-oscuro); /* color del boton al pasar el mouse */
+}
+
+/* Fondo del header */
+header {
+    background-color: var(--color-blanco);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+/* Logo y boton en una fila */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo img {
+    height: 55px;
+}
+
+.delivery-info strong {
+    color: var(--color-acento);
+}
+
+/* Menu fijo al hacer scroll */
+.main-nav {
+    position: sticky; /* menu fijo */
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-blanco); /* color de fondo del menu */
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--color-borde);
+    box-shadow: var(--sombra);
+}
+
+/* Enlaces del menu en fila */
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 35px; /* espacio entre enlaces del menu */
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    transition: color var(--transicion);
+    color: var(--color-negro); /* color de los enlaces del menu */
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Enlace del menu al pasar el mouse */
+.main-nav a:hover {
+    color: var(--color-acento); /* color del enlace al pasar el mouse */
+}
+
+/* Permite poner texto sobre la imagen */
+.banner {
+    position: relative;
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Evita que el menu tape los titulos */
+section[id] {
+    scroll-margin-top: 60px;
+}
+
+/* Espacio arriba y abajo de cada seccion */
+.seccion {
+    padding: var(--espacio-lg) 0;
+}
+
+.fondo-blanco {
+    background-color: var(--color-blanco);
+}
+
+/* Texto e imagen en dos columnas */
+.nosotros-contenido {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nosotros-texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+.nosotros-texto p {
+    margin-bottom: 15px;
+    color: var(--color-gris); /* color del parrafo */
+}
+
+.nosotros-imagen {
+    flex: 1;
+    min-width: 280px;
+}
+
+.nosotros-imagen img {
+    border-radius: 12px;
+    width: 100%;
+}
+
+/* Tarjetas de servicios en fila */
+.servicios-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Estilo de las tarjetas de servicios */
+.servicio-card {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--color-blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+}
+
+.servicio-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.servicio-info {
+    padding: 25px;
+}
+
+.servicio-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.servicio-info p {
+    color: var(--color-gris); /* color del parrafo */
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* Tarjetas de productos en fila */
+.productos-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.producto-card {
+    width: 260px; /* ancho de la tarjeta */
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+.producto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.producto-card h3 {
+    padding: 15px 10px 5px;
+    font-size: 1.1rem;
+}
+
+.producto-card p {
+    padding: 0 15px 20px;
+    font-size: 0.9rem;
+    color: var(--color-gris); /* color del parrafo */
+}
+
+/* Tarjetas de testimonios en fila */
+.testimonios-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonio-card {
+    width: 300px;
+    background-color: var(--color-blanco);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.testimonio-card p {
+    font-style: italic;
+    color: var(--color-gris); /* color del parrafo */
+    margin-bottom: 15px;
+}
+
+.testimonio-card h4 {
+    color: var(--color-acento);
+    font-size: 1rem;
+}
+
+/* Integrantes en fila y foto circular */
+.equipo-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.equipo-card {
+    text-align: center;
+    width: 180px;
+}
+
+.equipo-card img {
+    transition: border-color var(--transicion);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 12px;
+    border: 4px solid var(--color-borde);
+}
+
+.equipo-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.equipo-card p {
+    font-size: 0.9rem;
+    color: var(--color-gris); /* color del parrafo */
+}
+
+/* Fotos de la galeria en varias filas */
+.galeria-grid {
+    display: flex;
+    gap: 15px; /* espacio entre fotos */
+    flex-wrap: wrap;
+}
+
+/* Tamano de cada foto de la galeria */
+.galeria-item {
+    flex: 1 1 220px;
+    height: 240px; /* alto de las fotos */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Fotos mas anchas que las demas */
+.galeria-item.ancho {
+    flex-basis: 360px;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transicion);
+}
+
+/* Foto de la galeria al pasar el mouse */
+.galeria-item img:hover {
+    transform: scale(1.06);
+}
+
+/* Fondo y texto del footer */
+footer {
+    background-color: var(--color-negro); /* color de fondo del footer */
+    color: var(--color-blanco);
+}
+
+.footer-top {
+    border-bottom: 1px solid var(--color-linea);
+    padding: 30px 0;
+}
+
+/* Logo, mensaje y pagos del footer */
+.footer-top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    height: 50px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-mensaje {
+    max-width: 420px;
+    font-size: 0.9rem;
+    color: var(--color-gris-claro);
+}
+
+.footer-pagos img {
+    height: 35px;
+}
+
+/* Columnas del footer */
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 20px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-col h4 {
+    margin-bottom: 18px;
+    font-size: 1.05rem; /* tamano de los titulos del footer */
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    color: var(--color-gris-claro);
+    font-size: 0.9rem;
+}
+
+.footer-col ul li a:hover {
+    color: var(--color-blanco);
+}
+
+.footer-contacto p {
+    margin-bottom: 12px;
+    color: var(--color-gris-claro);
+}
+
+/* Iconos de redes en fila */
+.redes-sociales {
+    display: flex;
+    gap: 12px;
+    margin: 15px 0 20px;
+}
+
+/* Circulo de cada red social */
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    transition: background-color var(--transicion), color var(--transicion);
+}
+
+.redes-sociales a:hover {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+}
+
+.libro-reclamaciones img {
+    height: 55px;
+}
+
+/* Franja de derechos reservados */
+.footer-bottom {
+    background-color: var(--color-footer);
+    text-align: center;
+    padding: 18px;
+    font-size: 0.85rem;
+    color: var(--color-gris-medio);
+}
+
+/* Fuente de todos los titulos */
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos); /* fuente de los titulos */
+}
+
+/* Misma fuente en botones y formulario */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* Desplazamiento suave al usar el menu */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Barra negra superior */
+.barra-contacto {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    font-size: 0.85rem;
+    padding: 8px 0;
+}
+
+/* Contacto a la izquierda y redes a la derecha */
+.barra-contacto-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espacio-sm);
+}
+
+.separador {
+    margin: 0 var(--espacio-sm);
+}
+
+.barra-redes {
+    display: flex;
+    gap: 14px;
+}
+
+.barra-contacto a,
+.redes-sociales a,
+.footer-contacto a,
+.contacto-datos a {
+    transition: color var(--transicion);
+}
+
+.barra-contacto a:hover,
+.footer-contacto a:hover,
+.contacto-datos a:hover {
+    color: var(--color-acento);
+}
+
+/* Texto y boton de pedido */
+.delivery-info {
+    font-size: 0.9rem;
+    color: var(--color-gris);
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-md);
+}
+
+.delivery-info .btn-principal {
+    padding: 8px 20px;
+}
+
+/* Posicion del texto del banner */
+.banner-texto {
+    position: absolute;
+    right: 6%;
+    bottom: 8%;
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    color: var(--color-blanco);
+}
+
+.banner-texto p {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1rem, 2.2vw, 1.7rem);
+    line-height: 1.3;
+}
+
+/* Permite desplazar la tabla en celulares */
+.tabla-contenedor {
+    overflow-x: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+/* Ancho y bordes de la tabla */
+table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    background-color: var(--color-blanco);
+}
+
+caption {
+    padding: var(--espacio-sm);
+    font-weight: 600;
+    color: var(--color-gris);
+}
+
+th, td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+/* Encabezado de la tabla */
+thead th {
+    background-color: var(--color-acento); /* color del encabezado de la tabla */
+    color: var(--color-blanco);
+}
+
+tbody tr {
+    transition: background-color var(--transicion);
+}
+
+/* Fila de la tabla al pasar el mouse */
+tbody tr:hover {
+    background-color: var(--color-fondo);
+}
+
+/* Videos lado a lado */
+.videos-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.video-card {
+    flex: 1 1 380px;
+    max-width: 540px;
+    background-color: var(--color-fondo);
+    border-radius: var(--radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+/* Proporcion 16 por 9 de los videos */
+.video-card video,
+.video-youtube {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-negro);
+}
+
+/* Video de YouTube a todo el ancho */
+.video-youtube iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-card h3 {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+}
+
+.video-card h3 i {
+    color: var(--color-acento);
+}
+
+/* Formulario y datos en dos columnas */
+.contacto-contenido {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Campos del formulario en columna */
+.formulario {
+    flex: 2 1 380px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-sm);
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.formulario label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    padding: 12px;
+    border: 1px solid var(--color-gris-claro);
+    border-radius: 8px;
+    transition: border-color var(--transicion);
+}
+
+/* Borde del campo al hacer clic */
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-acento);
+}
+
+.formulario .btn-principal {
+    align-self: flex-start;
+    margin-top: var(--espacio-sm);
+    border: none;
+    cursor: pointer;
+}
+
+/* Tarjeta de datos de contacto */
+.contacto-datos {
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 30px;
+    background-color: var(--color-blanco);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.contacto-datos i,
+.footer-contacto i {
+    color: var(--color-acento);
+    width: 20px;
+}
+
+/* Tarjetas al pasar el mouse */
+.servicio-card,
+.producto-card,
+.testimonio-card,
+.video-card {
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.servicio-card:hover,
+.producto-card:hover,
+.testimonio-card:hover,
+.video-card:hover {
+    transform: translateY(-4px);
+}
+
+.equipo-card img:hover {
+    border-color: var(--color-acento);
+}
